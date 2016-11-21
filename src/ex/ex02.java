@@ -14,12 +14,12 @@ public class ex02 {
 		int ori = scn.nextInt();
 		System.out.print("請輸入要轉換的數字:");
 		int n = scn.nextInt();
-		int sum = n % 10;
-		int n1 = n /10;
-		for(int i = ori ; n1 > 0 ; i*=i){
-			sum = sum + ((n1 % 10)*i);
-			n1 = n1 / 10 ; 	
+		int sum = 0;
+		for(int i = 1 ; n > 0 ; i*=ori){
+			sum = sum + ((n % 10)*i);
+			n = n / 10 ; 	
 		}
+		System.out.print(sum);
 		System.out.print("請輸入要轉換成幾進制:");
 		int a = scn.nextInt();
 		String str = new StringBuilder(fun(sum , a)).reverse().toString();
