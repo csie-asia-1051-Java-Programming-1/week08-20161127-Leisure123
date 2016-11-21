@@ -19,7 +19,6 @@ public class ex02 {
 			sum = sum + ((n % 10)*i);
 			n = n / 10 ; 	
 		}
-		System.out.print(sum);
 		System.out.print("請輸入要轉換成幾進制:");
 		int a = scn.nextInt();
 		String str = new StringBuilder(fun(sum , a)).reverse().toString();
