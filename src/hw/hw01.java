@@ -22,7 +22,7 @@ public class hw01 {
 			return "";
 		}else{
 			a = n % 2;
-			return a+""+fun(n/2);
+			return a + "" + fun(n/2);
 		}
 	}
 

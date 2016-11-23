@@ -4,11 +4,31 @@ package hw;
  * Date: 2016/11/21
  * Author: 105021011 丁紹剛
  */
+import java.util.Scanner;
 public class hw03 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Scanner scn = new Scanner(System.in);
+		System.out.print("請輸入一個數字:");
+		int ori = scn.nextInt();
+		String str = fun(ori);
+		int sum = 0;
+		for(int i = 0 ; i < str.length() ; i++){
+			if(str.charAt(i) == '1'){
+				sum = sum + 1;
+			}
+		}
+		System.out.println("轉換為二進制有  " + sum + " 個1");
+	}
+	public static String fun(int n){
+		int a = 0;
+		if(n == 0){
+			return "";
+		}else{
+			a = n % 2;
+			return a + "" + fun(n/2);
+		}
 	}
 
 }

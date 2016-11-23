@@ -11,6 +11,7 @@ public class ex03 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scn = new Scanner(System.in);
+		System.out.print("請輸入要幾乘幾的矩陣(1):");
 		int n1 = scn.nextInt();
 		int m1 = scn.nextInt();
 		int data1[][] = new int [n1][m1];
@@ -19,6 +20,7 @@ public class ex03 {
 				data1[i][j] = scn.nextInt();
 			}
 		}
+		System.out.print("請輸入要幾乘幾的矩陣(2):");
 		int n2 = scn.nextInt();
 		int m2 = scn.nextInt();
 		int data2[][] = new int [n2][m2];
@@ -39,6 +41,7 @@ public class ex03 {
 					}
 				}
 			}
+			System.out.println("兩矩陣相乘的結果:");
 			for(int i = 0 ; i < n1 ; i++){
 				for(int j = 0 ; j < m2 ; j++){
 					System.out.print(data[i][j]+"\t");
