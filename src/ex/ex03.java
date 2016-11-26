@@ -33,7 +33,6 @@ public class ex03 {
 			System.out.print("無法出現方陣!");
 		}else{
 			int data[][] = new int [n1][m2];
-			int sum = 0;
 			for(int i = 0 ; i < n1 ; i++){
 				for(int j = 0 ; j < m2 ; j++){
 					for(int k = 0 ; k < m1 ; k++){
