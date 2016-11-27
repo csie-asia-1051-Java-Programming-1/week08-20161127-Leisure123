@@ -17,7 +17,7 @@ public class ex02 {
 		int sum = 0;
 		for(int i = 1 ; n > 0 ; i*=ori){
 			sum = sum + ((n % 10)*i);
-			n = n / 10 ; 	
+			n = n / 10 ;
 		}
 		System.out.print("請輸入要轉換成幾進制:");
 		int a = scn.nextInt();
@@ -29,7 +29,7 @@ public class ex02 {
 		String str = "";
 		while(s > 0){
 			b = s % a;
-			str = str + "" + b;
+			str = str + b;
 			s = s / a;
 		}
 		return str;
