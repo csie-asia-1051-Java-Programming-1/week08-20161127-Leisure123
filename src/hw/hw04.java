@@ -15,7 +15,7 @@ public class hw04 {
 		System.out.print("請輸入4個數字:");
 		int n = scn.nextInt();
 		int a = 1000;
-		if(n < 9999 && n > 0){
+		if(n < 10000 && n > 0){
 			for(int i = 0 ; i < 4 ; i++){
 				num.number(n/a);
 				n = n % a;
