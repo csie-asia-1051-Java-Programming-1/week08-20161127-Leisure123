@@ -11,24 +11,35 @@ public class hw04 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scn = new Scanner(System.in);
-		Number num = new Number();	
+		Number num = new Number();
+		char fin[][] = new char[5][23];
 		System.out.print("請輸入4個數字:");
 		int n = scn.nextInt();
 		int a = 1000;
 		if(n < 10000 && n > 0){
 			for(int i = 0 ; i < 4 ; i++){
-				num.number(n/a);
+				char data[][] = num.number(n/a);
 				n = n % a;
 				a = a / 10;
-				System.out.println();
+				for(int j = 0 ;j < 5 ; j++){
+					for(int s = 0 ; s < 5 ; s++){
+						fin[j][s+(i*6)]=data[j][s];
+					}
+				}
 			}
 		}else{
 			System.out.print("請輸入4個位數的數字!");
 		}
+		for(int i = 0 ; i < 5 ; i++){
+			for(int j = 0 ; j < 23 ; j++){
+				System.out.print(fin[i][j]);
+			}
+			System.out.println();
+		}
 	}
 }
 class Number{
-	public void number(int n){
+	public char[][] number(int n){
 		switch(n){
 		case 1:
 			char data1[][] = {{' ',' ',' ',' ','*'},
@@ -36,131 +47,73 @@ class Number{
 						  	  {' ',' ',' ',' ','*'},
 						  	  {' ',' ',' ',' ','*'},
 						  	  {' ',' ',' ',' ','*'}};
-			for(int i=0;i<5;i++){
-				for(int j = 0;j<5;j++){
-					System.out.print(data1[i][j]);
-				}
-				System.out.println();
-			}
-			break;
+			return data1;
 		case 2:
 			char data2[][] = {{'*','*','*','*','*'},
 			  		  		  {' ',' ',' ',' ','*'},
 			  		  		  {'*','*','*','*','*'},
 			  		  		  {'*',' ',' ',' ',' '},
 			  		  		  {'*','*','*','*','*'}};
-			for(int i=0;i<5;i++){
-				for(int j = 0;j<5;j++){
-					System.out.print(data2[i][j]);
-				}
-				System.out.println();
-			}
-			break;
+			return data2;
 		case 3:
 			char data3[][] = {{'*','*','*','*','*'},
 	  		  		  		  {' ',' ',' ',' ','*'},
 	  		  		  		  {'*','*','*','*','*'},
 	  		  		  		  {' ',' ',' ',' ','*'},
 	  		  		  		  {'*','*','*','*','*'}};
-			for(int i=0;i<5;i++){
-				for(int j = 0;j<5;j++){
-					System.out.print(data3[i][j]);
-				}
-				System.out.println();
-			}
-			break;
+			return data3;
 		case 4:
 			char data4[][] = {{'*',' ',' ',' ','*'},
 	  		  		  		  {'*',' ',' ',' ','*'},
 			  		  		  {'*','*','*','*','*'},
 			  		  		  {' ',' ',' ',' ','*'},
 			  		  		  {' ',' ',' ',' ','*'}};
-			for(int i=0;i<5;i++){
-				for(int j = 0;j<5;j++){
-					System.out.print(data4[i][j]);
-				}
-				System.out.println();
-			}
-			break;
+			return data4;
 		case 5:
 			char data5[][] = {{'*','*','*','*','*'},
 			  		  		  {'*',' ',' ',' ',' '},
 			  		  		  {'*','*','*','*','*'},
 			  		  		  {' ',' ',' ',' ','*'},
 			  		  		  {'*','*','*','*','*'}};
-			for(int i=0;i<5;i++){
-				for(int j = 0;j<5;j++){
-					System.out.print(data5[i][j]);
-				}
-				System.out.println();
-			}
-			break;
+			return data5;
 		case 6:
 			char data6[][] = {{'*','*','*','*','*'},
 			  		  		  {'*',' ',' ',' ',' '},
 			  		  		  {'*','*','*','*','*'},
 			  		  		  {'*',' ',' ',' ','*'},
 			  		  		  {'*','*','*','*','*'}};
-			for(int i=0;i<5;i++){
-				for(int j = 0;j<5;j++){
-					System.out.print(data6[i][j]);
-				}
-				System.out.println();
-			}
-			break;
+			return data6;
 		case 7:
 			char data7[][] = {{'*','*','*','*','*'},
 			  		  		  {'*',' ',' ',' ','*'},
 			  		  		  {'*',' ',' ',' ','*'},
 			  		  		  {' ',' ',' ',' ','*'},
 			  		  		  {' ',' ',' ',' ','*'}};
-			for(int i=0;i<5;i++){
-				for(int j = 0;j<5;j++){
-					System.out.print(data7[i][j]);
-				}
-				System.out.println();
-			}
-			break;
+			return data7;
 		case 8:
 			char data8[][] = {{'*','*','*','*','*'},
 			  		  		  {'*',' ',' ',' ','*'},
 			  		  		  {'*','*','*','*','*'},
 			  		  		  {'*',' ',' ',' ','*'},
 			  		  		  {'*','*','*','*','*'}};
-			for(int i=0;i<5;i++){
-				for(int j = 0;j<5;j++){
-					System.out.print(data8[i][j]);
-				}
-				System.out.println();
-			}
-			break;
+			return data8;
 		case 9:
 			char data9[][] = {{'*','*','*','*','*'},
 			  		  		  {'*',' ',' ',' ','*'},
 			  		  		  {'*','*','*','*','*'},
 			  		  		  {' ',' ',' ',' ','*'},
 			  		  		  {'*','*','*','*','*'}};
-			for(int i=0;i<5;i++){
-				for(int j = 0;j<5;j++){
-					System.out.print(data9[i][j]);
-				}
-				System.out.println();
-			}
-			break;
+			return data9;
 		case 0:
 			char data0[][] = {{'*','*','*','*','*'},
 			  		  		  {'*',' ',' ',' ','*'},
 			  		  		  {'*',' ',' ',' ','*'},
 			  		  		  {'*',' ',' ',' ','*'},
 			  		  		  {'*','*','*','*','*'}};
-			for(int i=0;i<5;i++){
-				for(int j = 0;j<5;j++){
-					System.out.print(data0[i][j]);
-				}
-				System.out.println();
-			}
-			break;
+			return data0;
 		}
+		return null;
+		
 		
 	}
 }
